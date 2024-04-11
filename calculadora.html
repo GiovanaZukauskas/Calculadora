@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="calculadora.css">
+
+    <style>
+        body {
+            background-color: rgb(9, 9, 9);
+            color: antiquewhite;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <p class="logo">
+        <img src="logoBranco.png" alt="logo">
+    </p>
+
+
+    <br> <br>
+    <div class="formulario">
+        <fieldset>
+            <div class="texto">
+                Insira o tipo de tinta da sua Obra:
+                <input type="text" id="input_tipo_tinta" placeholder="Óleo, Guache ou Acrílica"> <br>
+                <br>
+
+                Insira o tamanho da sua Obra:
+                <input type="text" id="input_tamanho_obra" placeholder="Pequena, Média ou Grande"> <br>
+                <br>
+
+                Insira o valor da sua Obra:
+                <input type="Number" id="input_valor_obra"> <br>
+                <br>
+
+                Você monitora a Temperatura/Umidade do ambiente em que suas Obras estão inseridas?
+                <input type="text" id="input_temperatura_obra" placeholder="Sim ou Não"> <br>
+                <br>
+
+                Você monitora a Luminosidade do ambiente em que suas Obras estão inseridas?
+                <input type="text" id="input_luminosidade_obra" placeholder="Sim ou Não"> <br>
+                <br>
+            </div>
+            <button onclick="verResultado()">Ver Resultado</button>
+        </fieldset>
+    </div>
+    <br>
+    <br>
+    <div id="resultado" class="conteudo"></div>
+
+</body>
+
+</html>
+
+
+<script>
+    function verResultado() {
+
+        var tipoTinta = input_tipo_tinta.value
+        var tamanhoObra = input_tamanho_obra.value
+        var valorObra = Number(input_valor_obra.value)
+        var temperatura = input_temperatura_obra.value
+        var luminosidade = input_luminosidade_obra.value
+        var prejuizoObra = 0
+
+
+        if (tipoTinta === "Óleo") {
+            if (tamanhoObra == "Pequena") {
+                if (temperatura == "Sim") {
+                    if (luminosidade == "Não") {
+                        prejuizoObra = valorObra * 0.25
+
+                        resultado.innerHTML = `Sua Obra está Médiamente Danificada! O valor do Prejuízo pode ser de até R$${prejuizoObra} <br> Contrate os nossos serviços para te ajudarmos a manter o ambiente adequado!`
+
+                    }
+
+
+                }
+            }
+        }
+
+        if (tipoTinta === "Óleo") {
+            if (tamanhoObra == "Pequena") {
+                if (temperatura == "Sim") {
+                    if (luminosidade == "Sim") {
+                        prejuizoObra = valorObra * 0.25
+
+                        resultado.innerHTML = `Sua Obra está Pouco Danificada! Mas caso a monitoração deixe de ser feita, o prejuízo mínimo pode ser de até R$${prejuizoObra}. <br> Contrate os nossos serviços para te ajudarmos a manter o ambiente adequado!`
+
+                    }
+
+
+                }
+            }
+        }
+
+        if (tipoTinta === "Óleo") {
+            if (tamanhoObra == "Pequena") {
+                if (temperatura == "Não") {
+                    if (luminosidade == "Não") {
+                        prejuizoObra = valorObra * 0.25
+
+                        resultado.innerHTML = `Sua Obra está Altamente Danificada! O valor do Prejuízo pode ser de até R$${prejuizoObra} <br> Contrate os nossos serviços para te ajudarmos a manter o ambiente adequado!`
+
+                    }
+
+
+                }
+            }
+        }
+
+        if (tipoTinta === "Óleo") {
+            if (tamanhoObra == "Pequena") {
+                if (temperatura == "Não") {
+                    if (luminosidade == "Sim") {
+                        prejuizoObra = valorObra * 0.25
+
+                        resultado.innerHTML = `Sua Obra está Médiamente Danificada! O valor do Prejuízo pode ser de até R$${prejuizoObra} <br> Contrate os nossos serviços para te ajudarmos a manter o ambiente adequado!`
+
+                    }
+
+
+                }
+            }
+        }
+
+
+
+        if (tipoTinta === "Óleo") {
+            if (tamanhoObra == "Média") {
+                if (temperatura == "Sim") {
+                    if (luminosidade == "Não") {
+                        prejuizoObra = valorObra * 0.50
+
+                        resultado.innerHTML = `Sua Obra está Médiamente Danificada! O valor do Prejuízo pode ser de até R$${prejuizoObra} <br> Contrate os nossos serviços para te ajudarmos a manter o ambiente adequado!`
+
+                    }
+
+
+                }
+            }
+        }
+
+
+        if (tipoTinta === "Óleo") {
+            if (tamanhoObra == "Média") {
+                if (temperatura == "Sim") {
+                    if (luminosidade == "Sim") {
+                        prejuizoObra = valorObra * 0.50
+
+                        resultado.innerHTML = `Sua Obra está Pouco Danificada! Mas caso a monitoração deixe de ser feita, o prejuízo mínimo pode ser de até R$${prejuizoObra} <br> Contrate os nossos serviços para te ajudarmos a manter o ambiente adequado!`
+
+                    }
+
+
+                }
+            }
+        }
+
+
+        if (tipoTinta === "Óleo") {
+            if (tamanhoObra == "Média") {
+                if (temperatura == "Não") {
+                    if (luminosidade == "Não") {
+                        prejuizoObra = valorObra * 0.50
+
+                        resultado.innerHTML = `Sua Obra está Altamente Danificada! O valor do Prejuízo pode ser de até R$${prejuizoObra} <br> Contrate os nossos serviços para te ajudarmos a manter o ambiente adequado!`
+
+                    }
+
+
+                }
+            }
+        }
+
+        if (tipoTinta === "Óleo") {
+            if (tamanhoObra == "Média") {
+                if (temperatura == "Não") {
+                    if (luminosidade == "Sim") {
+                        prejuizoObra = valorObra * 0.50
+
+                        resultado.innerHTML = `Sua Obra está Médiamente Danificada! O valor do Prejuízo pode ser de até R$${prejuizoObra} <br> Contrate os nossos serviços para te ajudarmos a manter o ambiente adequado!`
+
+                    }
+
+
+                }
+            }
+        }
+
+        if (tipoTinta === "Óleo") {
+            if (tamanhoObra == "Grande") {
+                if (temperatura == "Sim") {
+                    if (luminosidade == "Não") {
+                        prejuizoObra = valorObra * 0.75
+
+                        resultado.innerHTML = `Sua Obra está Médiamente Danificada! O valor do Prejuízo pode ser de até R$${prejuizoObra} <br> Contrate os nossos serviços para te ajudarmos a manter o ambiente adequado!`
+
+                    }
+
+
+                }
+            }
+        }
+
+        if (tipoTinta === "Óleo") {
+            if (tamanhoObra == "Grande") {
+                if (temperatura == "Sim") {
+                    if (luminosidade == "Sim") {
+                        prejuizoObra = valorObra * 0.75
+
+                        resultado.innerHTML = `Sua Obra está Pouco Danificada! Mas caso a monitoração deixe de ser feita, o prejuízo mínimo pode ser de até R$${prejuizoObra} <br> Contrate os nossos serviços para te ajudarmos a manter o ambiente adequado!`
+
+                    }
+
+
+                }
+            }
+        }
+
+
+        if (tipoTinta === "Óleo") {
+            if (tamanhoObra == "Grande") {
+                if (temperatura == "Não") {
+                    if (luminosidade == "Não") {
+                        prejuizoObra = valorObra * 0.75
+
+                        resultado.innerHTML = `Sua Obra está Altamente Danificada! O valor do Prejuízo pode ser de até R$${prejuizoObra} <br> Contrate os nossos serviços para te ajudarmos a manter o ambiente adequado!`
+
+                    }
+
+
+                }
+            }
+        }
+
+
+        if (tipoTinta === "Óleo") {
+            if (tamanhoObra == "Grande") {
+                if (temperatura == "Não") {
+                    if (luminosidade == "Sim") {
+                        prejuizoObra = valorObra * 0.75
+
+                        resultado.innerHTML = `Sua Obra está Médiamente Danificada! O valor do Prejuízo pode ser de até R$${prejuizoObra} <br> Contrate os nossos serviços para te ajudarmos a manter o ambiente adequado!`
+
+                    }
+
+
+                }
+            }
+        }
+
+
+        if (tipoTinta === "Guache") {
+            if (tamanhoObra == "Pequena") {
+                if (temperatura == "Sim") {
+                    if (luminosidade == "Não") {
+                        prejuizoObra = valorObra * 0.25
+
+                        resultado.innerHTML = `Sua Obra está Médiamente Danificada! O valor do Prejuízo pode ser de até R$${prejuizoObra} <br> Contrate os nossos serviços para te ajudarmos a manter o ambiente adequado!`
+
+                    }
+
+
+                }
+            }
+        }
+
+        if (tipoTinta === "Guache") {
+            if (tamanhoObra == "Pequena") {
+                if (temperatura == "Sim") {
+                    if (luminosidade == "Sim") {
+                        prejuizoObra = valorObra * 0.25
+
+                        resultado.innerHTML = `Sua Obra está Pouco Danificada! Mas caso a monitoração deixe de ser feita, o prejuízo mínimo pode ser de até R$${prejuizoObra}. <br> Contrate os nossos serviços para te ajudarmos a manter o ambiente adequado!`
+
+                    }
+
+
+                }
+            }
+        }
+
+        if (tipoTinta === "Guache") {
+            if (tamanhoObra == "Pequena") {
+                if (temperatura == "Não") {
+                    if (luminosidade == "Não") {
+                        prejuizoObra = valorObra * 0.25
+
+                        resultado.innerHTML = `Sua Obra está Altamente Danificada! O valor do Prejuízo pode ser de até R$${prejuizoObra} <br> Contrate os nossos serviços para te ajudarmos a manter o ambiente adequado!`
+
+                    }
+
+
+                }
+            }
+        }
+
+        if (tipoTinta === "Guache") {
+            if (tamanhoObra == "Pequena") {
+                if (temperatura == "Não") {
+                    if (luminosidade == "Sim") {
+                        prejuizoObra = valorObra * 0.25
+
+                        resultado.innerHTML = `Sua Obra está Médiamente Danificada! O valor do Prejuízo pode ser de até R$${prejuizoObra} <br> Contrate os nossos serviços para te ajudarmos a manter o ambiente adequado!`
+
+                    }
+
+
+                }
+            }
+        }
+
+
+
+        if (tipoTinta === "Guache") {
+            if (tamanhoObra == "Média") {
+                if (temperatura == "Sim") {
+                    if (luminosidade == "Não") {
+                        prejuizoObra = valorObra * 0.50
+
+                        resultado.innerHTML = `Sua Obra está Médiamente Danificada! O valor do Prejuízo pode ser de até R$${prejuizoObra} <br> Contrate os nossos serviços para te ajudarmos a manter o ambiente adequado!`
+
+                    }
+
+
+                }
+            }
+        }
+
+
+        if (tipoTinta === "Guache") {
+            if (tamanhoObra == "Média") {
+                if (temperatura == "Sim") {
+                    if (luminosidade == "Sim") {
+                        prejuizoObra = valorObra * 0.50
+
+                        resultado.innerHTML = `Sua Obra está Pouco Danificada! Mas caso a monitoração deixe de ser feita, o prejuízo mínimo pode ser de até R$${prejuizoObra} <br> Contrate os nossos serviços para te ajudarmos a manter o ambiente adequado!`
+
+                    }
+
+
+                }
+            }
+        }
+
+
+        if (tipoTinta === "Guache") {
+            if (tamanhoObra == "Média") {
+                if (temperatura == "Não") {
+                    if (luminosidade == "Não") {
+                        prejuizoObra = valorObra * 0.50
+
+                        resultado.innerHTML = `Sua Obra está Altamente Danificada! O valor do Prejuízo pode ser de até R$${prejuizoObra} <br> Contrate os nossos serviços para te ajudarmos a manter o ambiente adequado!`
+
+                    }
+
+
+                }
+            }
+        }
+
+        if (tipoTinta === "Guache") {
+            if (tamanhoObra == "Média") {
+                if (temperatura == "Não") {
+                    if (luminosidade == "Sim") {
+                        prejuizoObra = valorObra * 0.50
+
+                        resultado.innerHTML = `Sua Obra está Médiamente Danificada! O valor do Prejuízo pode ser de até R$${prejuizoObra} <br> Contrate os nossos serviços para te ajudarmos a manter o ambiente adequado!`
+
+                    }
+
+
+                }
+            }
+        }
+
+        if (tipoTinta === "Guache") {
+            if (tamanhoObra == "Grande") {
+                if (temperatura == "Sim") {
+                    if (luminosidade == "Não") {
+                        prejuizoObra = valorObra * 0.75
+
+                        resultado.innerHTML = `Sua Obra está Médiamente Danificada! O valor do Prejuízo pode ser de até R$${prejuizoObra} <br> Contrate os nossos serviços para te ajudarmos a manter o ambiente adequado!`
+
+                    }
+
+
+                }
+            }
+        }
+
+        if (tipoTinta === "Guache") {
+            if (tamanhoObra == "Grande") {
+                if (temperatura == "Sim") {
+                    if (luminosidade == "Sim") {
+                        prejuizoObra = valorObra * 0.75
+
+                        resultado.innerHTML = `Sua Obra está Pouco Danificada! Mas caso a monitoração deixe de ser feita, o prejuízo mínimo pode ser de até R$${prejuizoObra} <br> Contrate os nossos serviços para te ajudarmos a manter o ambiente adequado!`
+
+                    }
+
+
+                }
+            }
+        }
+
+
+        if (tipoTinta === "Guache") {
+            if (tamanhoObra == "Grande") {
+                if (temperatura == "Não") {
+                    if (luminosidade == "Não") {
+                        prejuizoObra = valorObra * 0.75
+
+                        resultado.innerHTML = `Sua Obra está Altamente Danificada! O valor do Prejuízo pode ser de até R$${prejuizoObra} <br> Contrate os nossos serviços para te ajudarmos a manter o ambiente adequado!`
+
+                    }
+
+
+                }
+            }
+        }
+
+
+        if (tipoTinta === "Guache") {
+            if (tamanhoObra == "Grande") {
+                if (temperatura == "Não") {
+                    if (luminosidade == "Sim") {
+                        prejuizoObra = valorObra * 0.75
+
+                        resultado.innerHTML = `Sua Obra está Médiamente Danificada! O valor do Prejuízo pode ser de até R$${prejuizoObra} <br> Contrate os nossos serviços para te ajudarmos a manter o ambiente adequado!`
+
+                    }
+
+
+                }
+            }
+        }
+
+
+
+        if (tipoTinta === "Acrílica") {
+            if (tamanhoObra == "Pequena") {
+                if (temperatura == "Sim") {
+                    if (luminosidade == "Não") {
+                        prejuizoObra = valorObra * 0.25
+
+                        resultado.innerHTML = `Sua Obra está Médiamente Danificada! O valor do Prejuízo pode ser de até R$${prejuizoObra} <br> Contrate os nossos serviços para te ajudarmos a manter o ambiente adequado!`
+
+                    }
+
+
+                }
+            }
+        }
+
+        if (tipoTinta === "Acrílica") {
+            if (tamanhoObra == "Pequena") {
+                if (temperatura == "Sim") {
+                    if (luminosidade == "Sim") {
+                        prejuizoObra = valorObra * 0.25
+
+                        resultado.innerHTML = `Sua Obra está Pouco Danificada! Mas caso a monitoração deixe de ser feita, o prejuízo mínimo pode ser de até R$${prejuizoObra}. <br> Contrate os nossos serviços para te ajudarmos a manter o ambiente adequado!`
+
+                    }
+
+
+                }
+            }
+        }
+
+        if (tipoTinta === "Acrílica") {
+            if (tamanhoObra == "Pequena") {
+                if (temperatura == "Não") {
+                    if (luminosidade == "Não") {
+                        prejuizoObra = valorObra * 0.25
+
+                        resultado.innerHTML = `Sua Obra está Altamente Danificada! O valor do Prejuízo pode ser de até R$${prejuizoObra} <br> Contrate os nossos serviços para te ajudarmos a manter o ambiente adequado!`
+
+                    }
+
+
+                }
+            }
+        }
+
+        if (tipoTinta === "Acrílica") {
+            if (tamanhoObra == "Pequena") {
+                if (temperatura == "Não") {
+                    if (luminosidade == "Sim") {
+                        prejuizoObra = valorObra * 0.25
+
+                        resultado.innerHTML = `Sua Obra está Médiamente Danificada! O valor do Prejuízo pode ser de até R$${prejuizoObra} <br> Contrate os nossos serviços para te ajudarmos a manter o ambiente adequado!`
+
+                    }
+
+
+                }
+            }
+        }
+
+
+
+        if (tipoTinta === "Acrílica") {
+            if (tamanhoObra == "Média") {
+                if (temperatura == "Sim") {
+                    if (luminosidade == "Não") {
+                        prejuizoObra = valorObra * 0.50
+
+                        resultado.innerHTML = `Sua Obra está Médiamente Danificada! O valor do Prejuízo pode ser de até R$${prejuizoObra} <br> Contrate os nossos serviços para te ajudarmos a manter o ambiente adequado!`
+
+                    }
+
+
+                }
+            }
+        }
+
+
+        if (tipoTinta === "Acrílica") {
+            if (tamanhoObra == "Média") {
+                if (temperatura == "Sim") {
+                    if (luminosidade == "Sim") {
+                        prejuizoObra = valorObra * 0.50
+
+                        resultado.innerHTML = `Sua Obra está Pouco Danificada! Mas caso a monitoração deixe de ser feita, o prejuízo mínimo pode ser de até R$${prejuizoObra} <br> Contrate os nossos serviços para te ajudarmos a manter o ambiente adequado!`
+
+                    }
+
+
+                }
+            }
+        }
+
+
+        if (tipoTinta === "Acrílica") {
+            if (tamanhoObra == "Média") {
+                if (temperatura == "Não") {
+                    if (luminosidade == "Não") {
+                        prejuizoObra = valorObra * 0.50
+
+                        resultado.innerHTML = `Sua Obra está Altamente Danificada! O valor do Prejuízo pode ser de até R$${prejuizoObra} <br> Contrate os nossos serviços para te ajudarmos a manter o ambiente adequado!`
+
+                    }
+
+
+                }
+            }
+        }
+
+        if (tipoTinta === "Acrílica") {
+            if (tamanhoObra == "Média") {
+                if (temperatura == "Não") {
+                    if (luminosidade == "Sim") {
+                        prejuizoObra = valorObra * 0.50
+
+                        resultado.innerHTML = `Sua Obra está Médiamente Danificada! O valor do Prejuízo pode ser de até R$${prejuizoObra} <br> Contrate os nossos serviços para te ajudarmos a manter o ambiente adequado!`
+
+                    }
+
+
+                }
+            }
+        }
+
+        if (tipoTinta === "Acrílica") {
+            if (tamanhoObra == "Grande") {
+                if (temperatura == "Sim") {
+                    if (luminosidade == "Não") {
+                        prejuizoObra = valorObra * 0.75
+
+                        resultado.innerHTML = `Sua Obra está Médiamente Danificada! O valor do Prejuízo pode ser de até R$${prejuizoObra} <br> Contrate os nossos serviços para te ajudarmos a manter o ambiente adequado!`
+
+                    }
+
+
+                }
+            }
+        }
+
+        if (tipoTinta === "Acrílica") {
+            if (tamanhoObra == "Grande") {
+                if (temperatura == "Sim") {
+                    if (luminosidade == "Sim") {
+                        prejuizoObra = valorObra * 0.75
+
+                        resultado.innerHTML = `Sua Obra está Pouco Danificada! Mas caso a monitoração deixe de ser feita, o prejuízo mínimo pode ser de até R$${prejuizoObra} <br> Contrate os nossos serviços para te ajudarmos a manter o ambiente adequado!`
+
+                    }
+
+
+                }
+            }
+        }
+
+
+        if (tipoTinta === "Acrílica") {
+            if (tamanhoObra == "Grande") {
+                if (temperatura == "Não") {
+                    if (luminosidade == "Não") {
+                        prejuizoObra = valorObra * 0.75
+
+                        resultado.innerHTML = `Sua Obra está Altamente Danificada! O valor do Prejuízo pode ser de até R$${prejuizoObra} <br> Contrate os nossos serviços para te ajudarmos a manter o ambiente adequado!`
+
+                    }
+
+
+                }
+            }
+        }
+
+
+        if (tipoTinta === "Acrílica") {
+            if (tamanhoObra == "Grande") {
+                if (temperatura == "Não") {
+                    if (luminosidade == "Sim") {
+                        prejuizoObra = valorObra * 0.75
+
+                        resultado.innerHTML = `Sua Obra está Médiamente Danificada! O valor do Prejuízo pode ser de até R$${prejuizoObra} <br> Contrate os nossos serviços para te ajudarmos a manter o ambiente adequado!`
+
+                    }
+
+
+                }
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+
+</script>
